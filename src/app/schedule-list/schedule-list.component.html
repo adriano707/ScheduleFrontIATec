@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Lista de agendas</h1>
+    <div>
+        <button mat-raised-button color="primary" (click)="CreateSchedule()">Adicionar Agenda</button>
+    </div>
+    <mat-list *ngFor="let schedule of schedules">
+        <mat-list-item>
+            <span matListItemTitle><a [routerLink]="['/schedule-detail', schedule.id]" [queryParams]="{scheduleName:  schedule.name}">{{schedule.name}}</a></span>
+            <span matListItemLine>{{schedule.description}}</span>
+            <p matLine></p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+    </mat-list>
+</div>

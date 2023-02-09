@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <h1>Schedule</h1>
+      <span class="menu-spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'schedules'"> Agendas </a>
+        <a mat-button [routerLink]="'schedules-create'"> Criar agenda </a>  
+        <a mat-button [routerLink]="'events-create'"> Criar evento </a>  
+        <a mat-button [routerLink]="'/login'"> Login </a>     
+        <a mat-button [routerLink]="'/events'"> Lista de Eventos </a>
+        <a mat-button [routerLink]="'teste1'"> teste </a>   
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <router-outlet></router-outlet>

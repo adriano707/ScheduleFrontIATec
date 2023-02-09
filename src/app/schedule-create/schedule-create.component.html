@@ -1,0 +1,22 @@
+<div class="container">
+    <form [formGroup]="data" novalidate class="pt-3">
+        <mat-card [class.mat-elevation-z8]="true">           
+            <div class="row p-3">
+                <mat-form-field class="example-full-width col-md-6">
+                    <mat-label class="required">Nome</mat-label>
+                    <input matInput formControlName="name" placeholder="Digite o nome do evento">
+                </mat-form-field>
+                <mat-form-field class="example-full-width col-md-12">
+                    <mat-label>Descrição</mat-label>
+                    <textarea matInput formControlName="description" placeholder="Descrição do evento"></textarea>
+                </mat-form-field>
+            </div>
+        </mat-card>
+        <section>
+            <div class="p-3">
+                <button mat-raised-button color="primary" (click)="save()">Salvar</button>
+                <button mat-raised-button color="warn" (click)="cancel()">Cancelar</button>
+            </div>
+        </section>
+    </form>
+</div>
